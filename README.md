@@ -3,7 +3,7 @@
 访问网络框架
 
 1.HttpConnect
-  HttpErrorCode: 服务器返回的错误代码枚举
+  HttpErrorCode: 服务器返回的错误代码枚举\n
   NtspHeader: 保存基本信息，主要包括每次向服务器发起请求时，必须传递的参数
   BaseHttpConnect: 自定义的Session访问网络工具，将获得通讯结果传递给BaseBusiness
   
