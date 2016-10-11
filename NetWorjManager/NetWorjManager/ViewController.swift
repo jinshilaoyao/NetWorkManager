@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let user = userLoginDataModule()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,14 +23,21 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let connect = BaseHttpConnect()
-        
-        let request = connect.createURLRequestWithUrl(url: "https://www.baidu.com", withSendData: nil, withHttpHeads: nil, withTimeOut: 7)
-        
-        connect.sendWithURLRequest(request: request!)
+        user.delegate = self
+        user.loginWith(phoneNumber: "adsf")
         
     }
-
-
 }
+
+extension ViewController: DataModuleDelegate {
+    
+    func didDataModuelNoticeSuccess(baseDataModule: BaseDataModule, forBusinessType businessID: BusinessType) {
+        
+    }
+    
+    func didDataModuelNoticeFail(baseDataModule: BaseDataModule, forBusinessType businessID: BusinessType, forErrorMessage errorMsg: String) {
+        
+    }
+}
+
 

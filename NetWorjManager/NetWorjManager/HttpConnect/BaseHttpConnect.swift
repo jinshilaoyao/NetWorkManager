@@ -90,9 +90,11 @@ extension BaseHttpConnect: URLSessionDelegate, URLSessionDataDelegate {
         
         completionHandler(URLSession.ResponseDisposition.allow)
         
-        let httpResponse = response as? HTTPURLResponse
-        
-        print("the response status code is \(httpResponse?.statusCode)")
+        guard let httpResponse = response as? HTTPURLResponse else {
+            return
+        }
+        errorCode = HttpErrorCode(rawValue: httpResponse.statusCode) ?? .None
+        print("the response status code is \(httpResponse.statusCode)")
         
     }
     

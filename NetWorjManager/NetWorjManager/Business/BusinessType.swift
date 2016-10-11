@@ -8,5 +8,7 @@
 
 
 enum BusinessType: Int {
-    case BUSINESS_LOGIN = 0
+    case BUSINESS_NONE = 0
+    case BUSINESS_LOGIN
+    case BUSINESS_LOGINOUT
 }

@@ -19,6 +19,11 @@
 		EB0641841DAB6C7B00DADA85 /* NtspHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0641831DAB6C7B00DADA85 /* NtspHeader.swift */; };
 		EB0641871DAB6D5A00DADA85 /* BaseBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0641861DAB6D5A00DADA85 /* BaseBusiness.swift */; };
 		EB0641891DAB6E2100DADA85 /* BusinessType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0641881DAB6E2100DADA85 /* BusinessType.swift */; };
+		EB4E75C61DAC7E78002EA8E4 /* UserLoginBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4E75C51DAC7E78002EA8E4 /* UserLoginBusiness.swift */; };
+		EB4E75C91DAC8CAA002EA8E4 /* DataModuleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4E75C81DAC8CAA002EA8E4 /* DataModuleDelegate.swift */; };
+		EB4E75CB1DAC8CC2002EA8E4 /* BaseDataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4E75CA1DAC8CC2002EA8E4 /* BaseDataModule.swift */; };
+		EB4E75CD1DACB5F9002EA8E4 /* BusinessFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4E75CC1DACB5F9002EA8E4 /* BusinessFactory.swift */; };
+		EB4E75CF1DACB7DD002EA8E4 /* userLoginDataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4E75CE1DACB7DD002EA8E4 /* userLoginDataModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		EB0641831DAB6C7B00DADA85 /* NtspHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NtspHeader.swift; sourceTree = "<group>"; };
 		EB0641861DAB6D5A00DADA85 /* BaseBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBusiness.swift; sourceTree = "<group>"; };
 		EB0641881DAB6E2100DADA85 /* BusinessType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessType.swift; sourceTree = "<group>"; };
+		EB4E75C51DAC7E78002EA8E4 /* UserLoginBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginBusiness.swift; sourceTree = "<group>"; };
+		EB4E75C81DAC8CAA002EA8E4 /* DataModuleDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModuleDelegate.swift; sourceTree = "<group>"; };
+		EB4E75CA1DAC8CC2002EA8E4 /* BaseDataModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataModule.swift; sourceTree = "<group>"; };
+		EB4E75CC1DACB5F9002EA8E4 /* BusinessFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessFactory.swift; path = ../DataModule/BusinessFactory.swift; sourceTree = "<group>"; };
+		EB4E75CE1DACB7DD002EA8E4 /* userLoginDataModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userLoginDataModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,7 @@
 		EB0641671DAB211900DADA85 /* NetWorjManager */ = {
 			isa = PBXGroup;
 			children = (
+				EB4E75C71DAC80E9002EA8E4 /* DataModule */,
 				EB0641851DAB6D4100DADA85 /* Business */,
 				EB06417A1DAB213F00DADA85 /* HttpConnect */,
 				EB0641681DAB211900DADA85 /* AppDelegate.swift */,
@@ -97,8 +108,20 @@
 			children = (
 				EB0641861DAB6D5A00DADA85 /* BaseBusiness.swift */,
 				EB0641881DAB6E2100DADA85 /* BusinessType.swift */,
+				EB4E75C51DAC7E78002EA8E4 /* UserLoginBusiness.swift */,
+				EB4E75CC1DACB5F9002EA8E4 /* BusinessFactory.swift */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		EB4E75C71DAC80E9002EA8E4 /* DataModule */ = {
+			isa = PBXGroup;
+			children = (
+				EB4E75C81DAC8CAA002EA8E4 /* DataModuleDelegate.swift */,
+				EB4E75CA1DAC8CC2002EA8E4 /* BaseDataModule.swift */,
+				EB4E75CE1DACB7DD002EA8E4 /* userLoginDataModule.swift */,
+			);
+			path = DataModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,12 +199,17 @@
 			files = (
 				EB06416B1DAB211900DADA85 /* ViewController.swift in Sources */,
 				EB06417E1DAB244300DADA85 /* BaseHttpConnect.swift in Sources */,
+				EB4E75CF1DACB7DD002EA8E4 /* userLoginDataModule.swift in Sources */,
+				EB4E75CB1DAC8CC2002EA8E4 /* BaseDataModule.swift in Sources */,
 				EB0641821DAB665700DADA85 /* DownloadDataHttpConnect.swift in Sources */,
 				EB0641891DAB6E2100DADA85 /* BusinessType.swift in Sources */,
 				EB06417C1DAB21AC00DADA85 /* HttpErrorCode.swift in Sources */,
 				EB0641871DAB6D5A00DADA85 /* BaseBusiness.swift in Sources */,
+				EB4E75C61DAC7E78002EA8E4 /* UserLoginBusiness.swift in Sources */,
 				EB0641801DAB2D1D00DADA85 /* HttpConnectRespones.swift in Sources */,
 				EB0641691DAB211900DADA85 /* AppDelegate.swift in Sources */,
+				EB4E75CD1DACB5F9002EA8E4 /* BusinessFactory.swift in Sources */,
+				EB4E75C91DAC8CAA002EA8E4 /* DataModuleDelegate.swift in Sources */,
 				EB0641841DAB6C7B00DADA85 /* NtspHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +372,7 @@
 				EB0641791DAB211900DADA85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
