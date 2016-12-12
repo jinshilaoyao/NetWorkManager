@@ -21,24 +21,30 @@ enum BusinessError: Int {
 }
 
 protocol DownloadBusinessDelegate: NSObjectProtocol {
-    func didDownloadFileOfByteCount(business: BaseBusiness, forByteCount byteCount: Int, forTotalByteCount totalByteCount: Int)
+    func httpConnectAtDownloadingWriteData(byresWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64)
 }
 
 protocol BusinessDelegate: NSObjectProtocol {
+    
     func businessDidSuccess(business: BaseBusiness, withData businessData: [String: AnyObject]?)
+    
     func businessDidError(business: BaseBusiness, withErrorCode businessErrorCode:BusinessError?, withHttpErrorCode httpErrorCode: HttpErrorCode?, withErrorMessage errMessage: String?)
+    
+    
 }
 
 class BaseBusiness: NSObject {
     
     fileprivate var businessErrorCode: BusinessError = .NoError
     fileprivate var errorMessage: String = ""
-    private var baseHttpConnect: BaseHttpConnect?
+    var baseHttpConnect: BaseHttpConnect?
     var connectUrl: String = ""
     var httpTimeout: Int = 0
+    var saveFilePath: URL? = URL(string: "")
     var businessType: BusinessType = .BUSINESS_LOGIN
     
     weak var delegate: BusinessDelegate?
+    weak var downLoadDelegate: DownloadBusinessDelegate?
     
     struct Content {
         static let HeadContentTypeName = "Content-Type"
@@ -47,7 +53,6 @@ class BaseBusiness: NSObject {
     
     override init() {
         super.init()
-        
         baseHttpConnect = BaseHttpConnect()
         baseHttpConnect?.delegate = self
     }
@@ -57,6 +62,7 @@ class BaseBusiness: NSObject {
         guard let dict = param else {
             return
         }
+
         
         if !JSONSerialization.isValidJSONObject(dict) {
             return
@@ -132,9 +138,11 @@ class BaseBusiness: NSObject {
     }
 }
 
+
 extension BaseBusiness: HttpConnectDelegate {
-    func httpContentAtDownloading(bytesWritten: Int64, totalBytesWritten: Int64) {
-        
+    
+    func httpContentAtDownloading(bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        downLoadDelegate?.httpConnectAtDownloadingWriteData(byresWritten: bytesWritten, totalBytesWritten: totalBytesWritten, totalBytesExpectedToWrite: totalBytesExpectedToWrite)
     }
 
     func httpConnectDidError(errorCode: HttpErrorCode) {

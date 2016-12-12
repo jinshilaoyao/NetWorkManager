@@ -114,7 +114,6 @@ extension BaseHttpConnect: URLSessionDelegate, URLSessionDataDelegate {
             respones.responesData = dataBuffer
             delegate?.httpConnectDidFinish(httpContent: self)
         }
-        
     }
     
     func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
@@ -124,13 +123,11 @@ extension BaseHttpConnect: URLSessionDelegate, URLSessionDataDelegate {
             completionHandler(URLSession.AuthChallengeDisposition.useCredential, card)
         }
     }
-    
 }
 
 protocol HttpConnectDelegate: NSObjectProtocol {
     
     func httpConnectDidError(errorCode: HttpErrorCode)
     func httpConnectDidFinish(httpContent: BaseHttpConnect)
-    func httpContentAtDownloading(bytesWritten: Int64, totalBytesWritten: Int64)
-    
+    func httpContentAtDownloading(bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64)
 }

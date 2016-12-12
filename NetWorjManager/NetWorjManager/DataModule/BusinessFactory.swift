@@ -15,6 +15,8 @@ class BusinessFactory: NSObject {
             return UserLoginBusiness()
         } else if type == .BUSINESS_LOGINOUT {
             return UserLoginBusiness()
+        } else if type == .BUSINESS_USER_DOWNLOAD {
+            return DownLoadFileBusiness()
         }
         return nil
     }

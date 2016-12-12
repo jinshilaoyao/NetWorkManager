@@ -11,5 +11,7 @@ protocol DataModuleDelegate: NSObjectProtocol{
     
     func didDataModuelNoticeSuccess(baseDataModule: BaseDataModule, forBusinessType businessID: BusinessType)
     func didDataModuelNoticeFail(baseDataModule: BaseDataModule, forBusinessType businessID: BusinessType, forErrorMessage errorMsg: String)
-    
+}
+protocol DataModuleDownloadDelegate: NSObjectProtocol {
+    func didDataModuleNoticeDownLoadFiling(baseDataModule: BaseDataModule, for byteCount: Int64, totalByteCount: Int64, totalByteExpectedCount: Int64)
 }

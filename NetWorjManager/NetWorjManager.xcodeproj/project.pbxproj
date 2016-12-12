@@ -19,6 +19,7 @@
 		EB0641841DAB6C7B00DADA85 /* NtspHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0641831DAB6C7B00DADA85 /* NtspHeader.swift */; };
 		EB0641871DAB6D5A00DADA85 /* BaseBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0641861DAB6D5A00DADA85 /* BaseBusiness.swift */; };
 		EB0641891DAB6E2100DADA85 /* BusinessType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0641881DAB6E2100DADA85 /* BusinessType.swift */; };
+		EB3189AC1DFAA4B20078D71B /* DownLoadFileBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3189AB1DFAA4B20078D71B /* DownLoadFileBusiness.swift */; };
 		EB4E75C61DAC7E78002EA8E4 /* UserLoginBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4E75C51DAC7E78002EA8E4 /* UserLoginBusiness.swift */; };
 		EB4E75C91DAC8CAA002EA8E4 /* DataModuleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4E75C81DAC8CAA002EA8E4 /* DataModuleDelegate.swift */; };
 		EB4E75CB1DAC8CC2002EA8E4 /* BaseDataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4E75CA1DAC8CC2002EA8E4 /* BaseDataModule.swift */; };
@@ -41,6 +42,7 @@
 		EB0641831DAB6C7B00DADA85 /* NtspHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NtspHeader.swift; sourceTree = "<group>"; };
 		EB0641861DAB6D5A00DADA85 /* BaseBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBusiness.swift; sourceTree = "<group>"; };
 		EB0641881DAB6E2100DADA85 /* BusinessType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessType.swift; sourceTree = "<group>"; };
+		EB3189AB1DFAA4B20078D71B /* DownLoadFileBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownLoadFileBusiness.swift; sourceTree = "<group>"; };
 		EB4E75C51DAC7E78002EA8E4 /* UserLoginBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginBusiness.swift; sourceTree = "<group>"; };
 		EB4E75C81DAC8CAA002EA8E4 /* DataModuleDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModuleDelegate.swift; sourceTree = "<group>"; };
 		EB4E75CA1DAC8CC2002EA8E4 /* BaseDataModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataModule.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				EB0641861DAB6D5A00DADA85 /* BaseBusiness.swift */,
 				EB0641881DAB6E2100DADA85 /* BusinessType.swift */,
 				EB4E75C51DAC7E78002EA8E4 /* UserLoginBusiness.swift */,
+				EB3189AB1DFAA4B20078D71B /* DownLoadFileBusiness.swift */,
 				EB4E75CC1DACB5F9002EA8E4 /* BusinessFactory.swift */,
 			);
 			path = Business;
@@ -205,6 +208,7 @@
 				EB0641891DAB6E2100DADA85 /* BusinessType.swift in Sources */,
 				EB06417C1DAB21AC00DADA85 /* HttpErrorCode.swift in Sources */,
 				EB0641871DAB6D5A00DADA85 /* BaseBusiness.swift in Sources */,
+				EB3189AC1DFAA4B20078D71B /* DownLoadFileBusiness.swift in Sources */,
 				EB4E75C61DAC7E78002EA8E4 /* UserLoginBusiness.swift in Sources */,
 				EB0641801DAB2D1D00DADA85 /* HttpConnectRespones.swift in Sources */,
 				EB0641691DAB211900DADA85 /* AppDelegate.swift in Sources */,

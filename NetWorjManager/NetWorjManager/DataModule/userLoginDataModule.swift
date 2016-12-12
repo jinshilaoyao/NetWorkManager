@@ -45,4 +45,10 @@ class userLoginDataModule: BaseDataModule {
         return .BUSINESS_LOGINOUT
     }
     
+    func downloadFile() -> BusinessType {
+        baseBusiness = createBusinessWithType(type: .BUSINESS_USER_DOWNLOAD)
+        baseBusiness?.downLoadDelegate = self
+        baseBusiness?.execute(param: nil, withNtspHeader: createNtspHeader())
+        return .BUSINESS_USER_DOWNLOAD
+    }
 }

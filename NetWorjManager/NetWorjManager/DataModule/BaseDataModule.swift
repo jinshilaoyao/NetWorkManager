@@ -14,7 +14,9 @@ class BaseDataModule: NSObject, BusinessDelegate {
     private var connectFail: Bool = false
     private var resquestFail: Bool = false
     
+    
     weak var delegate: DataModuleDelegate?
+    weak var downLoadDelegate: DataModuleDownloadDelegate?
     
     var baseBusiness: BaseBusiness?
     
@@ -24,15 +26,14 @@ class BaseDataModule: NSObject, BusinessDelegate {
             return nil
         }
         business.delegate = self
+        business.downLoadDelegate = self
         return business
     }
     
     func createNtspHeader() -> NtspHeader? {
-        
         let header = NtspHeader()
         header.sessionid = "001"
         header.userid = "AZ001"
-        
         return header
     }
     
@@ -51,5 +52,10 @@ class BaseDataModule: NSObject, BusinessDelegate {
         }
         
         delegate?.didDataModuelNoticeFail(baseDataModule: self, forBusinessType: business.businessType, forErrorMessage: errMessage!)
+    }
+}
+extension BaseDataModule: DownloadBusinessDelegate {
+    func httpConnectAtDownloadingWriteData(byresWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        downLoadDelegate?.didDataModuleNoticeDownLoadFiling(baseDataModule: self, for: byresWritten, totalByteCount: totalBytesWritten, totalByteExpectedCount: totalBytesExpectedToWrite)
     }
 }

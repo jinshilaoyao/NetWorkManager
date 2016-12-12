@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         user.delegate = self
+        user.downLoadDelegate = self
         user.loginWith(phoneNumber: "adsf")
         
     }
@@ -36,6 +37,11 @@ extension ViewController: DataModuleDelegate {
     }
     
     func didDataModuelNoticeFail(baseDataModule: BaseDataModule, forBusinessType businessID: BusinessType, forErrorMessage errorMsg: String) {
+        
+    }
+}
+extension ViewController: DataModuleDownloadDelegate {
+    func didDataModuleNoticeDownLoadFiling(baseDataModule: BaseDataModule, for byteCount: Int64, totalByteCount: Int64, totalByteExpectedCount: Int64) {
         
     }
 }
