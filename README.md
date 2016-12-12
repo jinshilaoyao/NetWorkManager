@@ -17,3 +17,6 @@
   DataModuleDelegate：数据模型的代理，delegate一般是Controller，在Controller中实现模型的网络请求的结果（Success，Fail），并执行后续操作。可根据BusinessType判断模型请求的网络服务类型。<br/>
 
 
+通过Swift实现这个网络框架，我得到了什么？？？
+1.提升swift的使用能力
+2.熟悉NSURLSession
